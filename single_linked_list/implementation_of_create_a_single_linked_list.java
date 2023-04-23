@@ -14,6 +14,19 @@ public  class implementation_of_single_linked_list
         }
     }
 
+    public void displayList()
+    {
+        ListNode ptr = head;
+
+        while (ptr != null)
+        {
+            System.out.print(ptr.data + " --> ");
+            ptr = ptr.next;
+        }
+
+        System.out.println("null");
+    }
+
     public static void main(String[] args)
     {
         implementation_of_single_linked_list list = new implementation_of_single_linked_list();
@@ -26,5 +39,7 @@ public  class implementation_of_single_linked_list
         list.head.next = second;
         second.next = third;
         third.next = fourth;
+
+        list.displayList();
     }
 }
